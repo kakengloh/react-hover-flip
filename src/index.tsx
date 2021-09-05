@@ -4,8 +4,8 @@ import './index.css'
 interface IReactHoverFlipProps {
     front: ReactElement
     back: ReactElement
-    height?: number
-    width?: number
+    height: number
+    width: number
     direction?: 'horizontal' | 'vertical'
 }
 
