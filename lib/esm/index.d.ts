@@ -1,10 +1,11 @@
 import { FunctionComponent, ReactElement } from 'react';
+import './index.css';
 interface IReactHoverFlipProps {
-    height: number;
-    width: number;
-    direction?: 'horizontal' | 'vertical';
     front: ReactElement;
     back: ReactElement;
+    height?: number;
+    width?: number;
+    direction?: 'horizontal' | 'vertical';
 }
 declare const ReactHoverFlip: FunctionComponent<IReactHoverFlipProps>;
 export default ReactHoverFlip;
