@@ -1,5 +1,4 @@
 import { FunctionComponent, ReactElement } from 'react';
-import './index.css';
 interface IReactHoverFlipProps {
     front: ReactElement;
     back: ReactElement;
