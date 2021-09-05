@@ -1,43 +1,55 @@
 {
-  "name": "react-library",
+  "name": "react-hover-flip",
   "version": "0.1.0",
-  "private": true,
+  "description": "A react component that will flip on hover",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kakengloh/react-hover-flip"
+  },
+  "keywords": [
+    "react",
+    "hover",
+    "flip",
+    "card"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "KaKeng Loh",
+    "email": "kakengloh@gmail.com",
+    "url": "https://matb.studio/kakengloh"
+  },
+  "bugs": {
+    "url": "https://github.com/kakengloh/react-hover-flip"
+  },
+  "homepage": "https://github.com/kakengloh/react-hover-flip",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
+    "styled-components": "^5.3.1"
+  },
+  "peerDependencies": {
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
+    "react-dom": "^17.0.2"
+  },
+  "files": [
+    "./lib"
+  ],
+  "devDependencies": {
+    "@types/react": "^17.0.19",
+    "@types/react-dom": "^17.0.9",
+    "@types/styled-components": "^5.1.14",
+    "typescript": "^4.4.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir lib/cjs"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
     ]
   }
 }
