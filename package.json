@@ -1,6 +1,6 @@
 {
   "name": "react-hover-flip",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "A react component that will flip on hover",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
