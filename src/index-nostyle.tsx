@@ -9,14 +9,16 @@ interface IReactHoverFlipProps {
 }
 
 const ReactHoverFlip: FunctionComponent<IReactHoverFlipProps>
-    = ({front, back, height, width, direction = "horizontal"}: IReactHoverFlipProps) => {
+    = ({ front, back, height, width, direction = "horizontal" }: IReactHoverFlipProps) => {
     return (
-        <div className="container" style={{ height, width }}>
-            <div className={`inner-container ${direction}`}>
-                <div className="front">{front}</div>
-                <div className={`back ${direction}`}>{back}</div>
+        <>
+            <div className="rhf-container" style={{ height, width }}>
+                <div className={`rhf-inner-container rhf-${direction}`}>
+                    <div className="rhf-front">{front}</div>
+                    <div className={`rhf-back rhf-${direction}`}>{back}</div>
+                </div>
             </div>
-        </div>
+        </>
     )
 }
 
