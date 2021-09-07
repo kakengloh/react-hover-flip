@@ -2,6 +2,8 @@
 
 `react-hover-flip` is a simple react component that will flip on hover.
 
+[Demo](https://react-hover-flip.surge.sh)
+
 ## Installation
 
 Using npm
@@ -17,7 +19,7 @@ yarn add react-hover-flip
 
 ## CRA Usage
 
-```typescript
+```tsx
 import ReactHoverFlip from 'react-hover-flip'
 
 const Front = <h1>Front!</h1>
@@ -33,7 +35,7 @@ const Back = <h1>Back!</h1>
 ```
 
 ## Next.js usage
-```typescript
+```tsx
 // YourComponent.tsx
 import 'react-hover-flip/lib/esm/index.css' // import css
 import dynamic from 'next/dynamic'
