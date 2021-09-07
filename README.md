@@ -15,7 +15,7 @@ yarn add react-hover-flip
 ```
 
 
-## Usage
+## CRA Usage
 
 ```typescript
 import ReactHoverFlip from 'react-hover-flip'
@@ -30,6 +30,31 @@ const Back = <h1>Back!</h1>
   height={100}
   width={100}
 />
+```
+
+## Next.js usage
+```typescript
+// YourComponent.tsx
+import 'react-hover-flip/lib/esm/index.css' // import css
+import dynamic from 'next/dynamic'
+
+// Lazy load ReactHoverFlip as it is a pure react component 
+const ReactHoverFlip = dynamic(() => import('react-hover-flip/lib/esm/index-nostyle'), { ssr: false })
+
+const YourComponent = () => {
+  const Front = <h1>Front!</h1>
+  const Back = <h1>Back!</h1>
+
+  return (
+    <ReactHoverFlip
+      front={Front}
+      back={Back}
+      direction="horizontal"
+      height={100}
+      width={100}
+    />
+  )
+}
 ```
 
 ## Contributing
